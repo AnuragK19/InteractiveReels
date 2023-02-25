@@ -1,0 +1,138 @@
+*{
+    padding:0;
+    margin:0
+}
+html,body{
+    height:100%;
+    width:100%
+}
+
+#fabric-canvas{
+    background-color: rgba(0,0,0,0.7);
+    filter: none;
+  transition: filter 0.5s;
+}
+
+#video-player,#preview-image{
+    display: none;
+}
+
+body{
+    position: relative;
+}
+ .widget-controls{
+     position: absolute;
+    height: 55%;
+    width:15%;
+    right:5px;
+    top:40%;
+    margin-top: -50%;
+    border-radius: 5px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+ }
+
+ .media-controls{
+    position: absolute;
+   height:40%;
+   width:15%;
+   left:5px;
+   top:40%;
+   margin-top: -50%;
+   border-radius: 5px;
+   z-index: 5;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+ .widget-btn,.media-btn{
+    height:3rem;
+    color:white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ .widget-btn img,.media-btn img{
+    filter: invert(1);
+ }
+
+ .action-drawer{
+    display: flex;
+    justify-content: space-evenly;
+    padding:15px;
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    background-color: rgba(49, 49, 49, 0.8);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+ }
+
+ .action-drawer button.media-btn{
+    font-size: 10px;
+ }
+
+ .action-drawer button.media-btn > img{
+    filter:invert(0)
+ }
+ .action-drawer button.media-btn:last-of-type > img{
+    filter:invert(1)
+ }
+
+ input[type="color"]{
+    border:none;
+    outline: 0;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+ }
+
+ /* Drawer CSS */
+ .drawer {
+    display: flex;
+    justify-content: center;
+    padding:15px;
+    position: fixed;
+    border-radius: 10px 10px 0 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:  rgba(0, 0, 0, 0.8);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+  
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn {
+    border: 1px solid rgb(71, 57, 57);
+    color: white;
+    background-color: #282828;;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .btn:last-of-type{
+    margin-left: 5px;
+  }
+  .upload-btn-wrapper input[type=file] {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
